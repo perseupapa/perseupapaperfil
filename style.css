@@ -17,19 +17,44 @@ body {
 }
 
 .perseu {
-	font-family: 'Alkatra', cursive;
-	color: rgb(1, 9, 75);
-	font-size: 55px;
-	font-weight: 400;
-	line-height: 120px;
-	padding-bottom: 55px;
-	padding-top: 20px;
-	
-}
-
-h1 span {
-	color: rgb(235, 238, 241);
-}
+    font-family: 'Alkatra', cursive;
+    color: rgb(1, 9, 75);
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 120px;
+    padding-bottom: 55px;
+    padding-top: 20px;
+    animation: pulse 1.5s steps(5) infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scale(1.2);
+    }
+    25% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    45% {
+      transform: scale(1.2);
+    }
+    60% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  h1 span {
+    color: rgba(1, 187, 233, 0.891);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.809);
+  }
 
 p {
 	color: rgb(1, 9, 75);
@@ -51,18 +76,57 @@ a {
 }
 
 .github {
-	background: rgb(1, 8, 75);
-	border-radius: 17px;
-	color: rgb(245, 240, 240);
-	text-decoration: none;
-	margin-left: 20px;
-	padding: 16px 39px;
-}
-
-.linkedin {
-	background: rgb(1, 8, 75);
-	border-radius: 17px;
-	color: rgb(245, 240, 240);
-	text-decoration: none;
-	margin-right: 20px;
-}
+    background: rgb(242, 243, 248);
+    border-radius: 17px;
+    color: rgb(1, 9, 75);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 16px 39px;
+    box-shadow: 0 0 10px 5px rgb(242, 243, 248);
+    transition: box-shadow 0.3s ease;
+    animation: brilho 1.5s linear infinite;
+  }
+  
+  @keyframes brilho {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(200%);
+    }
+  }
+  
+  .linkedin {
+    background: rgba(1, 187, 233, 0.891);
+    border-radius: 17px;
+    color: rgb(245, 240, 240);
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 16px 39px;
+    box-shadow: 0 0 10px 5px rgba(1, 187, 233, 0.891);
+    transition: box-shadow 0.3s ease;
+    animation: brilho 1.5s linear infinite;
+  }
+  
+  @keyframes brilho {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(200%);
+    }
+  }
+  
+  .github:hover,
+  .linkedin:hover {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.891);
+  }
+  
